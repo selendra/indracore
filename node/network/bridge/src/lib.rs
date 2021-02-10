@@ -24,6 +24,7 @@ use futures::future::BoxFuture;
 use futures::prelude::*;
 use futures::stream::BoxStream;
 use parity_scale_codec::{Decode, Encode};
+use tracing_futures as _;
 
 use sc_network::Event as NetworkEvent;
 

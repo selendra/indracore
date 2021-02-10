@@ -19,6 +19,7 @@
 
 #![deny(missing_docs, unused_crate_dependencies)]
 
+use tracing_futures as _;
 use bitvec::vec::BitVec;
 use futures::{
     channel::{mpsc, oneshot},

@@ -18,6 +18,7 @@
 
 #![deny(unused_crate_dependencies)]
 
+use tracing_futures as _;
 use std::collections::{HashMap, HashSet};
 use std::convert::TryFrom;
 use std::pin::Pin;

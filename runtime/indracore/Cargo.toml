@@ -66,6 +66,7 @@ pallet-vesting = { git = "https://github.com/selendra/substrate", branch = "v2.0
 pallet-utility = { git = "https://github.com/selendra/substrate", branch = "v2.0.1", default-features = false }
 pallet-offences-benchmarking = { git = "https://github.com/selendra/substrate", branch = "v2.0.1", default-features = false, optional = true }
 pallet-session-benchmarking = { git = "https://github.com/selendra/substrate", branch = "v2.0.1", default-features = false, optional = true }
+pallet-sudo = { git = "https://github.com/selendra/substrate", branch = "v2.0.1", default-features = false }
 
 runtime-common = { package = "indracore-runtime-common", path = "../common", default-features = false }
 primitives = { package = "indracore-primitives", path = "../../primitives", default-features = false }
@@ -128,7 +129,8 @@ std = [
 	"pallet-babe/std",
 	"pallet-randomness-collective-flip/std",
 	"primitives/std",
-	"runtime-common/std",	
+	"runtime-common/std",
+	"pallet-sudo/std"
 ]
 runtime-benchmarks = [
     "hex-literal",

@@ -20,6 +20,7 @@
 #![deny(missing_docs, unused_crate_dependencies)]
 #![recursion_limit = "256"]
 
+use tracing_futures as _;
 use futures::{channel::oneshot, FutureExt, TryFutureExt};
 use std::time::Duration;
 use thiserror::Error;

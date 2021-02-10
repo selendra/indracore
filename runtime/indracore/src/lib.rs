@@ -141,6 +141,7 @@ impl Filter<Call> for BaseFilter {
             | Call::Vesting(_)
             | Call::Identity(_)
             | Call::Proxy(_)
+            | Call::Sudo(_)
             | Call::Multisig(_) => true,
         }
     }
@@ -884,6 +885,11 @@ impl frame_support::traits::OnRuntimeUpgrade for CustomOnRuntimeUpgrade {
     }
 }
 
+impl pallet_sudo::Config for Runtime {
+    type Event = Event;
+    type Call = Call;
+}
+
 construct_runtime! {
     pub enum Runtime where
         Block = Block,
@@ -928,6 +934,7 @@ construct_runtime! {
         Proxy: pallet_proxy::{Module, Call, Storage, Event<T>},
         // Multisig dispatch. Late addition.
         Multisig: pallet_multisig::{Module, Call, Storage, Event<T>},
+        Sudo: pallet_sudo::{Module, Call, Config<T>, Storage, Event<T>},
     }
 }
 

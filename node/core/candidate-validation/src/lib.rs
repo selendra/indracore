@@ -23,6 +23,7 @@
 #![deny(unused_crate_dependencies, unused_results)]
 #![warn(missing_docs)]
 
+use tracing_futures as _;
 use indracore_node_primitives::{InvalidCandidate, ValidationResult};
 use indracore_node_subsystem_util::metrics::{self, prometheus};
 use indracore_parachain::primitives::{ValidationParams, ValidationResult as WasmValidationResult};

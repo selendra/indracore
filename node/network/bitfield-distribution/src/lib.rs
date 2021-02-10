@@ -22,6 +22,7 @@
 
 #![deny(unused_crate_dependencies)]
 
+use tracing_futures as _;
 use futures::{channel::oneshot, FutureExt};
 use parity_scale_codec::{Decode, Encode};
 
