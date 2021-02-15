@@ -1,0 +1,129 @@
+[package]
+name = "indracore-service"
+version = "0.2.0"
+authors = ["Selendra <info@selendra.org>"]
+edition = "2018"
+
+[dependencies]
+# External Crates
+futures = "0.3.12"
+hex-literal = "0.3.1"
+tracing = "0.1.22"
+tracing-futures = "0.2.4"
+serde = { version = "1.0.120", features = ["derive"] }
+thiserror = "1.0.23"
+
+# Substrate Client
+babe = { package = "sc-consensus-babe", git = "https://github.com/selendra/substrate", branch = "v2.0.2" }
+grandpa = { package = "sc-finality-grandpa", git = "https://github.com/selendra/substrate", branch = "v2.0.2" }
+service = { package = "sc-service", git = "https://github.com/selendra/substrate", branch = "v2.0.2", default-features = false }
+telemetry = { package = "sc-telemetry", git = "https://github.com/selendra/substrate", branch = "v2.0.2" }
+sc-authority-discovery = { git = "https://github.com/selendra/substrate", branch = "v2.0.2" }
+sc-block-builder = { git = "https://github.com/selendra/substrate", branch = "v2.0.2" }
+sc-chain-spec = { git = "https://github.com/selendra/substrate", branch = "v2.0.2" }
+sc-client-api = { git = "https://github.com/selendra/substrate", branch = "v2.0.2" }
+sc-client-db = { git = "https://github.com/selendra/substrate", branch = "v2.0.2" }
+sc-consensus = { git = "https://github.com/selendra/substrate", branch = "v2.0.2" }
+sc-consensus-slots = { git = "https://github.com/selendra/substrate", branch = "v2.0.2" }
+sc-executor = { git = "https://github.com/selendra/substrate", branch = "v2.0.2" }
+sc-finality-grandpa-warp-sync = { git = "https://github.com/selendra/substrate", branch = "v2.0.2", optional = true }
+sc-network = { git = "https://github.com/selendra/substrate", branch = "v2.0.2" }
+sc-transaction-pool = { git = "https://github.com/selendra/substrate", branch = "v2.0.2" }
+
+# Substrate Primitives
+babe-primitives = { package = "sp-consensus-babe", git = "https://github.com/selendra/substrate", branch = "v2.0.2" }
+consensus_common = { package = "sp-consensus", git = "https://github.com/selendra/substrate", branch = "v2.0.2" }
+grandpa_primitives = { package = "sp-finality-grandpa", git = "https://github.com/selendra/substrate", branch = "v2.0.2" }
+inherents = { package = "sp-inherents", git = "https://github.com/selendra/substrate", branch = "v2.0.2" }
+sp-authority-discovery = { git = "https://github.com/selendra/substrate", branch = "v2.0.2" }
+sp-api = { git = "https://github.com/selendra/substrate", branch = "v2.0.2" }
+sp-block-builder = { git = "https://github.com/selendra/substrate", branch = "v2.0.2" }
+sp-blockchain = { git = "https://github.com/selendra/substrate", branch = "v2.0.2" }
+sp-core = { git = "https://github.com/selendra/substrate", branch = "v2.0.2" }
+sp-io = { git = "https://github.com/selendra/substrate", branch = "v2.0.2" }
+sp-keystore = { git = "https://github.com/selendra/substrate", branch = "v2.0.2" }
+sp-offchain = { package = "sp-offchain", git = "https://github.com/selendra/substrate", branch = "v2.0.2" }
+sp-runtime = { git = "https://github.com/selendra/substrate", branch = "v2.0.2" }
+sp-session = { git = "https://github.com/selendra/substrate", branch = "v2.0.2" }
+sp-storage = { git = "https://github.com/selendra/substrate", branch = "v2.0.2" }
+sp-transaction-pool = { git = "https://github.com/selendra/substrate", branch = "v2.0.2" }
+sp-trie = { git = "https://github.com/selendra/substrate", branch = "v2.0.2" }
+sp-state-machine = { git = "https://github.com/selendra/substrate", branch = "v2.0.2" }
+
+# Substrate Pallets
+pallet-babe = { git = "https://github.com/selendra/substrate", branch = "v2.0.2" }
+pallet-im-online = { git = "https://github.com/selendra/substrate", branch = "v2.0.2" }
+pallet-staking = { git = "https://github.com/selendra/substrate", branch = "v2.0.2" }
+pallet-transaction-payment-rpc-runtime-api = { git = "https://github.com/selendra/substrate", branch = "v2.0.2" }
+
+# Substrate Other
+frame-benchmarking = { git = "https://github.com/selendra/substrate", branch = "v2.0.2" }
+frame-system-rpc-runtime-api = { git = "https://github.com/selendra/substrate", branch = "v2.0.2" }
+prometheus-endpoint = { package = "substrate-prometheus-endpoint", git = "https://github.com/selendra/substrate", branch = "v2.0.2" }
+
+# Indracore
+indracore-node-core-proposer = { path = "../core/proposer" }
+indracore-overseer = { path = "../overseer" }
+indracore-parachain = { path = "../../parachain" }
+indracore-primitives = { path = "../../primitives" }
+indracore-rpc = { path = "../../rpc" }
+indracore-subsystem = { package = "indracore-node-subsystem", path = "../subsystem" }
+indracore-node-subsystem-util = { path = "../subsystem-util" }
+indracore-runtime-parachains = { path = "../../runtime/parachains" }
+
+# Indracore Runtimes
+indracore-runtime = { path = "../../runtime/indracore" }
+
+# Indracore Subsystems
+indracore-availability-bitfield-distribution = { path = "../network/bitfield-distribution", optional = true }
+indracore-availability-distribution = { path = "../network/availability-distribution", optional = true }
+indracore-availability-recovery = { path = "../network/availability-recovery", optional = true }
+indracore-collator-protocol = { path = "../network/collator-protocol", optional = true }
+indracore-network-bridge = { path = "../network/bridge", optional = true }
+indracore-node-collation-generation = { path = "../collation-generation", optional = true }
+indracore-node-core-av-store = { path = "../core/av-store", optional = true }
+indracore-node-core-backing = { path = "../core/backing", optional = true }
+indracore-node-core-bitfield-signing = { path = "../core/bitfield-signing", optional = true }
+indracore-node-core-candidate-selection = { path = "../core/candidate-selection", optional = true }
+indracore-node-core-candidate-validation = { path = "../core/candidate-validation", optional = true }
+indracore-node-core-chain-api = { path = "../core/chain-api", optional = true }
+indracore-node-core-provisioner = { path = "../core/provisioner", optional = true }
+indracore-node-core-runtime-api = { path = "../core/runtime-api", optional = true }
+indracore-pov-distribution = { path = "../network/pov-distribution", optional = true }
+indracore-statement-distribution = { path = "../network/statement-distribution", optional = true }
+indracore-approval-distribution = { path = "../network/approval-distribution", optional = true }
+
+[dev-dependencies]
+indracore-test-client = { path = "../test/client" }
+env_logger = "0.8.2"
+
+[features]
+default = ["db", "full-node"]
+db = ["service/db"]
+full-node = [
+	"indracore-node-core-av-store",
+	"sc-finality-grandpa-warp-sync"
+]
+
+runtime-benchmarks = [
+	"indracore-runtime/runtime-benchmarks",
+]
+
+real-overseer = [
+	"indracore-availability-bitfield-distribution",
+	"indracore-availability-distribution",
+	"indracore-availability-recovery",
+	"indracore-collator-protocol",
+	"indracore-network-bridge",
+	"indracore-node-collation-generation",
+	"indracore-node-core-backing",
+	"indracore-node-core-bitfield-signing",
+	"indracore-node-core-candidate-selection",
+	"indracore-node-core-candidate-validation",
+	"indracore-node-core-chain-api",
+	"indracore-node-core-provisioner",
+	"indracore-node-core-runtime-api",
+	"indracore-pov-distribution",
+	"indracore-statement-distribution",
+	"indracore-approval-distribution",
+]
