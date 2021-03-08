@@ -39,6 +39,7 @@ members = [
 	"runtime/common",
 	"runtime/parachains",
 	"runtime/indracore",
+	"runtime/kumandra"
 ]
 
 # make sure dev builds with backtrace do
