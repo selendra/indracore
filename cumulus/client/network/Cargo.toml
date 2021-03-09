@@ -7,12 +7,12 @@ edition = "2018"
 
 [dependencies]
 # Substrate deps
-sp-blockchain = { git = "https://github.com/selendra/substrate", branch = "master" }
-sp-consensus = { git = "https://github.com/selendra/substrate", branch = "master" }
-sp-runtime = { git = "https://github.com/selendra/substrate", branch = "master" }
-sp-api = { git = "https://github.com/selendra/substrate", branch = "master" }
-sp-core = { git = "https://github.com/selendra/substrate", branch = "master" }
-sc-client-api = { git = "https://github.com/selendra/substrate", branch = "master" }
+sp-blockchain = { git = "https://github.com/selendra/substrate", branch = "v2.0.4-eth" }
+sp-consensus = { git = "https://github.com/selendra/substrate", branch = "v2.0.4-eth" }
+sp-runtime = { git = "https://github.com/selendra/substrate", branch = "v2.0.4-eth" }
+sp-api = { git = "https://github.com/selendra/substrate", branch = "v2.0.4-eth" }
+sp-core = { git = "https://github.com/selendra/substrate", branch = "v2.0.4-eth" }
+sc-client-api = { git = "https://github.com/selendra/substrate", branch = "v2.0.4-eth" }
 
 # Indracore deps
 indracore-primitives = { path = "../../../primitives" }
@@ -34,8 +34,8 @@ derive_more = "0.99.2"
 # cumulus-test-service = { path = "../../test/service" }
 
 # substrate deps
-sc-client-api = { git = "https://github.com/selendra/substrate", branch = "master" }
-sp-core = { git = "https://github.com/selendra/substrate", branch = "master" }
-sp-keyring = { git = "https://github.com/selendra/substrate", branch = "master" }
-sp-keystore = { git = "https://github.com/selendra/substrate", branch = "master" }
-sp-consensus = { git = "https://github.com/selendra/substrate", branch = "master" }
+sc-client-api = { git = "https://github.com/selendra/substrate", branch = "v2.0.4-eth" }
+sp-core = { git = "https://github.com/selendra/substrate", branch = "v2.0.4-eth" }
+sp-keyring = { git = "https://github.com/selendra/substrate", branch = "v2.0.4-eth" }
+sp-keystore = { git = "https://github.com/selendra/substrate", branch = "v2.0.4-eth" }
+sp-consensus = { git = "https://github.com/selendra/substrate", branch = "v2.0.4-eth" }

@@ -6,12 +6,12 @@ edition = "2018"
 
 [dependencies]
 # Substrate dependencies
-sp-runtime = { git = "https://github.com/selendra/substrate", branch = "master" }
-sp-core = { git = "https://github.com/selendra/substrate", branch = "master" }
-sp-io = { git = "https://github.com/selendra/substrate", branch = "master" }
-sp-consensus = { git = "https://github.com/selendra/substrate", branch = "master" }
-sp-state-machine = { git = "https://github.com/selendra/substrate", branch = "master" }
-sc-client-api = { git = "https://github.com/selendra/substrate", branch = "master" }
+sp-runtime = { git = "https://github.com/selendra/substrate", branch = "v2.0.4-eth" }
+sp-core = { git = "https://github.com/selendra/substrate", branch = "v2.0.4-eth" }
+sp-io = { git = "https://github.com/selendra/substrate", branch = "v2.0.4-eth" }
+sp-consensus = { git = "https://github.com/selendra/substrate", branch = "v2.0.4-eth" }
+sp-state-machine = { git = "https://github.com/selendra/substrate", branch = "v2.0.4-eth" }
+sc-client-api = { git = "https://github.com/selendra/substrate", branch = "v2.0.4-eth" }
 
 # Indracore dependencies
 indracore-primitives = { path = "../../../primitives" }
@@ -35,10 +35,10 @@ tracing = "0.1.22"
 # indracore-node-subsystem-test-helpers = { path = "../../../node/subsystem-test-helpers" }
 
 # # Substrate dependencies
-# sp-keyring = { git = "https://github.com/selendra/substrate", branch = "master" }
-# sp-blockchain = { git = "https://github.com/selendra/substrate", branch = "master" }
-# sp-state-machine = { git = "https://github.com/selendra/substrate", branch = "master" }
-# substrate-test-client = { git = "https://github.com/selendra/substrate", branch = "master" }
+# sp-keyring = { git = "https://github.com/selendra/substrate", branch = "v2.0.4-eth" }
+# sp-blockchain = { git = "https://github.com/selendra/substrate", branch = "v2.0.4-eth" }
+# sp-state-machine = { git = "https://github.com/selendra/substrate", branch = "v2.0.4-eth" }
+# substrate-test-client = { git = "https://github.com/selendra/substrate", branch = "v2.0.4-eth" }
 
 # # Other dependencies
 # env_logger = "0.7.1"

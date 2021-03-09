@@ -43,10 +43,10 @@ environmental = { version = "1.1.2", default-features = false }
 # hex-literal = "0.2.1"
 # lazy_static = "1.4"
 # sc-client-api = { git = "https://github.com/selendra/substrate", default-features = false, branch = "master" }
-# sp-keyring = { git = "https://github.com/selendra/substrate", branch = "master" }
-# sp-blockchain = { git = "https://github.com/selendra/substrate", branch = "master" }
-# sc-executor = { git = "https://github.com/selendra/substrate", branch = "master" }
-# sp-consensus = { git = "https://github.com/selendra/substrate", branch = "master" }
+# sp-keyring = { git = "https://github.com/selendra/substrate", branch = "v2.0.4-eth" }
+# sp-blockchain = { git = "https://github.com/selendra/substrate", branch = "v2.0.4-eth" }
+# sc-executor = { git = "https://github.com/selendra/substrate", branch = "v2.0.4-eth" }
+# sp-consensus = { git = "https://github.com/selendra/substrate", branch = "v2.0.4-eth" }
 # env_logger = "0.7.1"
 
 [features]
