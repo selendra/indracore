@@ -6,9 +6,9 @@ edition = "2018"
 
 [dependencies]
 # Substrate dependencies
-sp-std = { git = "https://github.com/selendra/substrate", default-features = false, branch = "master" }
-sp-runtime = { git = "https://github.com/selendra/substrate", default-features = false, branch = "master" }
-sp-trie = { git = "https://github.com/selendra/substrate", default-features = false, branch = "master" }
+sp-std = { git = "https://github.com/selendra/substrate", branch = "v2.0.4-eth", default-features = false }
+sp-runtime = { git = "https://github.com/selendra/substrate", branch = "v2.0.4-eth", default-features = false }
+sp-trie = { git = "https://github.com/selendra/substrate", branch = "v2.0.4-eth", default-features = false }
 
 # Indracore dependencies
 indracore-parachain = { path = "../../../parachain", default-features = false }

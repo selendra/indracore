@@ -6,13 +6,13 @@ edition = "2018"
 
 [dependencies]
 # Substrate dependencies
-sp-inherents = { git = "https://github.com/selendra/substrate", default-features = false, branch = "master" }
-sp-core = { git = "https://github.com/selendra/substrate", default-features = false, branch = "master" }
+sp-inherents = { git = "https://github.com/selendra/substrate", branch = "v2.0.4-eth", default-features = false }
+sp-core = { git = "https://github.com/selendra/substrate", branch = "v2.0.4-eth", default-features = false }
 sc-client-api = { git = "https://github.com/selendra/substrate", branch = "v2.0.4-eth", optional = true }
 sp-runtime = { git = "https://github.com/selendra/substrate", branch = "v2.0.4-eth", optional = true }
-sp-std = { git = "https://github.com/selendra/substrate", default-features = false, branch = "master" }
+sp-std = { git = "https://github.com/selendra/substrate", branch = "v2.0.4-eth", default-features = false }
 sp-state-machine = { git = "https://github.com/selendra/substrate", branch = "v2.0.4-eth", optional = true }
-sp-trie = { git = "https://github.com/selendra/substrate", default-features = false, branch = "master" }
+sp-trie = { git = "https://github.com/selendra/substrate", branch = "v2.0.4-eth", default-features = false }
 sp-api = { git = "https://github.com/selendra/substrate", branch = "v2.0.4-eth", optional = true }
 
 # Cumulus dependencies

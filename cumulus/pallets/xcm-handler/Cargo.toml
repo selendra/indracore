@@ -10,9 +10,9 @@ codec = { package = "parity-scale-codec", version = "2.0.0", features = [ "deriv
 log = { version = "0.4.14", default-features = false }
 
 # Substrate Dependencies
-sp-std = { git = "https://github.com/selendra/substrate", default-features = false, branch = "master" }
-frame-support = { git = "https://github.com/selendra/substrate", default-features = false, branch = "master" }
-frame-system = { git = "https://github.com/selendra/substrate", default-features = false, branch = "master" }
+sp-std = { git = "https://github.com/selendra/substrate", branch = "v2.0.4-eth",  default-features = false }
+frame-support = { git = "https://github.com/selendra/substrate", branch = "v2.0.4-eth",  default-features = false }
+frame-system = { git = "https://github.com/selendra/substrate", branch = "v2.0.4-eth",  default-features = false }
 
 # Indracore Dependencies
 xcm = { path = "../../../xcm", default-features = false }
